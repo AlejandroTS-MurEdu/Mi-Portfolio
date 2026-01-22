@@ -833,80 +833,92 @@ section,
 }
 
 /*--------------------------------------------------------------
-# Skills Section
+# Stack Section
 --------------------------------------------------------------*/
-.skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
+
+.stack-card {
+  background: var(--surface-color);
+  border-radius: 18px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 rgba(0,0,0,0);
 }
 
-.skills .progress .skill {
-  color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
+.stack-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(56, 189, 248, 0.15);
+}
+
+.stack-card h3 {
+  font-size: 20px;
   font-weight: 600;
-  font-family: var(--heading-font);
+  margin-bottom: 14px;
 }
 
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
+/* Level badges */
+.level {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
 }
 
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
+/* Básico - Azul pastel */
+.level.basic {
+  background: rgba(147, 197, 253, 0.15);
+  color: #93c5fd;
+  border: 1px solid rgba(147, 197, 253, 0.45);
 }
 
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
+/* Intermedio - Azul eléctrico */
+.level.intermediate {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.55);
 }
 
-/*--------------------------------------------------------------
-# Interests Section
---------------------------------------------------------------*/
+/* Avanzado - Morado neón */
+.level.advanced {
+  background: rgba(168, 85, 247, 0.15);
+  color: #a855f7;
+  border: 1px solid rgba(168, 85, 247, 0.55);
+}
+
+/*---------------------------------------------
+# Interests / Tecnologías Section
+----------------------------------------------*/
 .interests .features-item {
-  background-color: var(--surface-color);
   display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 20px;
-  transition: 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  position: relative;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--surface-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+  text-align: center;
 }
 
+/* Iconos grandes y centrados */
 .interests .features-item i {
-  font-size: 32px;
-  padding-right: 10px;
-  line-height: 0;
+  font-size: 48px;
+  margin-bottom: 0.5rem;
 }
 
-.interests .features-item h3 {
-  font-weight: 700;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-size: 16px;
-}
-
-.interests .features-item h3 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
+/* Hover: levantar y sombra */
 .interests .features-item:hover {
-  border-color: var(--accent-color);
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-.interests .features-item:hover h3 a {
-  color: var(--accent-color);
+/* Nombre del lenguaje */
+.interests .features-item h3 {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 0.25rem;
+  color: var(--default-color);
 }
 
 /*--------------------------------------------------------------
@@ -1376,6 +1388,7 @@ section,
 # Starter Section Section
 --------------------------------------------------------------*/
 .starter-section {
+  color: transparent
   /* Add your styles here */
 }
 
