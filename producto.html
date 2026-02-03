@@ -1,12 +1,331 @@
-<!--Una página de producto como pccomponente-->
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Producto</title>
+
+    <!-- Vendor CSS -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Nuevas Fuentes -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <section class="section product-page">
+      <div class="container">
+        <div class="row g-5 align-items-start">
+          <!-- CARRUSEL -->
+          <div class="col-lg-6">
+            <div
+              id="productCarousel"
+              class="carousel slide product-carousel"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div class="product-image-box">
+                    <img
+                      src="assets/img/grafica-1.png"
+                      alt="RTX 4070 Ti frontal"
+                    />
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="product-image-box">
+                    <img
+                      src="assets/img/grafica-2.png"
+                      alt="RTX 4070 Ti frontal"
+                    />
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="product-image-box">
+                    <img
+                      src="assets/img/grafica-3.png"
+                      alt="RTX 4070 Ti frontal"
+                    />
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="product-image-box">
+                    <img
+                      src="assets/img/grafica-4.png"
+                      alt="RTX 4070 Ti frontal"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="prev"
+              >
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#productCarousel"
+                data-bs-slide="next"
+              >
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <!-- INFO -->
+          <div class="col-lg-6">
+            <h1 class="mb-2">RTX 4070 Ti 12GB</h1>
+
+            <div class="mb-3 text-warning">
+              ★★★★☆ <span class="text-secondary">(132 opiniones)</span>
+            </div>
+
+            <h2 class="product-price mb-3">899,99 €</h2>
+
+            <p class="mb-4">
+              Tarjeta gráfica de alto rendimiento diseñada para gaming 4K, ray
+              tracing y creación profesional.
+            </p>
+
+            <div class="d-flex gap-3 mb-4">
+              <button class="btn btn-primary btn-lg">
+                <i class="bi bi-cart-plus"></i> Añadir al carrito
+              </button>
+              <button class="btn btn-outline-secondary btn-lg">
+                <i class="bi bi-heart"></i>
+              </button>
+            </div>
+
+            <ul class="list-unstyled product-features">
+              <li><i class="bi bi-check-circle"></i> 12GB GDDR6X</li>
+              <li><i class="bi bi-check-circle"></i> DLSS 3</li>
+              <li><i class="bi bi-check-circle"></i> Ray Tracing</li>
+              <li><i class="bi bi-check-circle"></i> PCIe 4.0</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- TABS -->
+        <div class="row mt-5">
+          <div class="col-12">
+            <ul class="nav nav-tabs product-tabs" role="tablist">
+              <li class="nav-item">
+                <button
+                  class="nav-link active"
+                  data-bs-toggle="tab"
+                  data-bs-target="#desc"
+                >
+                  Sobre el producto
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#specs"
+                >
+                  Especificaciones
+                </button>
+              </li>
+              <li class="nav-item">
+                <button
+                  class="nav-link"
+                  data-bs-toggle="tab"
+                  data-bs-target="#rati"
+                >
+                  Opinión Clientes
+                </button>
+              </li>
+            </ul>
+
+            <div class="tab-content p-4 product-tab-content">
+              <div class="tab-pane fade show active" id="desc">
+                <p>
+                  La RTX 4070 Ti ofrece un rendimiento excepcional con
+                  eficiencia energética mejorada, ideal para gaming extremo y
+                  creadores de contenido.
+                </p>
+                <p>
+                  <strong
+                    >GeForce RTX Serie 40: La plataforma definitiva para
+                    jugadores y creadores</strong
+                  >
+                </p>
+                <p>
+                  Las GPU NVIDIA® GeForce RTX® serie 40 son más que rápidas para
+                  jugadores y creadores. Cuentan con la tecnología de la
+                  arquitectura ultra eficiente NVIDIA Ada Lovelace, que ofrece
+                  un salto espectacular tanto en rendimiento como en gráficos
+                  con tecnología de IA. Disfruta de mundos virtuales realistas
+                  con trazado de rayos y juegos con FPS ultra altos y la
+                  latencia más baja. Descubre nuevas y revolucionarias formas de
+                  crear contenido y una aceleración de flujo de trabajo sin
+                  precedentes.
+                </p>
+                <p>
+                  <strong
+                    >Trazado de rayos: Hiperrealista. Hiper rápido.</strong
+                  >
+                </p>
+                <p>
+                  La arquitectura Ada libera toda la gloria del trazado de
+                  rayos, que simula cómo se comporta la luz en el mundo real.
+                  Con la potencia de RTX serie 40 y núcleos RT de tercera
+                  generación, puedes disfrutar de mundos virtuales
+                  increíblemente detallados como nunca.
+                </p>
+                <p>
+                  <strong
+                    >NVIDIA DLSS 3: El multiplicador de rendimiento, con
+                    tecnología de IA.</strong
+                  >
+                </p>
+                <p>
+                  DLSS es un avance revolucionario en materia de gráficos con
+                  tecnología de IA que aumenta enormemente el rendimiento.
+                  Gracias a los nuevos Tensor Cores de cuarta generación y el
+                  acelerador de flujo óptico en las GPU GeForce RTX serie 40,
+                  DLSS 3 utiliza la IA para crear más fotogramas de alta
+                  calidad.
+                </p>
+                <p>
+                  <strong
+                    >NVIDIA Reflex: La victoria se mide en milisegundos.</strong
+                  >
+                </p>
+                <p>
+                  Las GPU NVIDIA Reflex y GeForce RTX serie 40 ofrecen la
+                  latencia más baja y la mejor capacidad de respuesta para
+                  obtener la máxima ventaja competitiva. Reflex, diseñada para
+                  optimizar y medir la latencia del sistema, ofrece una
+                  adquisición de objetivos más rápida, tiempos de reacción más
+                  rápidos y la mejor precisión de objetivo para los juegos
+                  competitivos.
+                </p>
+              </div>
+
+              <div class="tab-pane fade" id="specs">
+                <div class="specs-grid">
+                  <!-- Procesador -->
+                  <div class="spec-card">
+                    <h3><i class="bi bi-cpu"></i> Procesador</h3>
+                    <ul>
+                      <li><strong>CUDA:</strong> Sí</li>
+                      <li><strong>Núcleos CUDA:</strong> 7680</li>
+                      <li><strong>Familia:</strong> NVIDIA</li>
+                      <li>
+                        <strong>Procesador gráfico:</strong> GeForce RTX 4070 Ti
+                      </li>
+                      <li><strong>Frecuencia:</strong> 2640 MHz</li>
+                      <li><strong>Máx. resolución:</strong> 7680 x 4320</li>
+                      <li><strong>Pantallas:</strong> 4</li>
+                    </ul>
+                  </div>
+
+                  <!-- Memoria -->
+                  <div class="spec-card">
+                    <h3><i class="bi bi-memory"></i> Memoria</h3>
+                    <ul>
+                      <li><strong>Capacidad:</strong> 12 GB</li>
+                      <li><strong>Tipo:</strong> GDDR6X</li>
+                      <li><strong>Ancho de datos:</strong> 192 bit</li>
+                      <li><strong>Ancho de banda:</strong> 21 GB/s</li>
+                    </ul>
+                  </div>
+
+                  <!-- Puertos e Interfaces -->
+                  <div class="spec-card">
+                    <h3><i class="bi bi-plug"></i> Puertos e Interfaces</h3>
+                    <ul>
+                      <li><strong>Tipo:</strong> PCI Express 4.0</li>
+                      <li><strong>HDMI:</strong> 1 x 2.1</li>
+                      <li><strong>DisplayPort:</strong> 3 x 1.4</li>
+                    </ul>
+                  </div>
+
+                  <!-- Peso y Dimensiones -->
+                  <div class="spec-card">
+                    <h3>
+                      <i class="bi bi-arrows-fullscreen"></i> Peso y Dimensiones
+                    </h3>
+                    <ul>
+                      <li><strong>Profundidad:</strong> 336 mm</li>
+                      <li><strong>Altura:</strong> 58 mm</li>
+                      <li><strong>Ancho:</strong> 140 mm</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tab-pane fade" id="rati">
+                <div class="rating-summary">
+                  <h1>Resumen de opiniones</h1>
+                  <p style="text-align: justify">
+                    La Gigabyte GeForce RTX 4070 Ti GAMING OC 12GB sorprende por
+                    su sobresaliente rendimiento en juegos a 2K y 4K,
+                    permitiendo disfrutar títulos actuales en calidad ultra, con
+                    una fluidez que muchos usuarios destacan como excelente. Los
+                    usuarios aprecian su refrigeración eficiente y
+                    funcionamiento silencioso, así como su diseño robusto y bien
+                    acabado. Instalarla resulta sencillo gracias al soporte
+                    incluido. Como punto a considerar, su tamaño es notable y
+                    exige cajas espaciosas.
+                  </p>
+                </div>
+
+                <section class="pro-contra">
+                  <div class="pro-card">
+                    <h2><i class="bi bi-hand-thumbs-up-fill"></i> Pros</h2>
+                    <ul>
+                      <li>Rendimiento sobresaliente en gaming</li>
+                      <li>Funcionamiento silencioso y fresco</li>
+                      <li>Ideal para gaming 2K/4K y edición</li>
+                      <li>Instalación sencilla, incluye soporte</li>
+                    </ul>
+                  </div>
+
+                  <div class="contra-card">
+                    <h2><i class="bi bi-hand-thumbs-down-fill"></i> Contras</h2>
+                    <ul>
+                      <li>Es de gran tamaño, requiere caja amplia</li>
+                      <li>
+                        VRAM Limitada, corta para juegos con textura 4K
+                        hiperrealista
+                      </li>
+                      <li>Alta inversión inicial, precio elevado</li>
+                    </ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
