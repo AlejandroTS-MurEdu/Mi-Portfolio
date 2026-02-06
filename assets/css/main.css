@@ -14,18 +14,36 @@
 # Font & Color Variables
 --------------------------------------------------------------*/
 :root {
+  /*NuevosCambios*/
+  --bg-primary: #0b0f19;
+  --bg-secondary: #111827;
+  --accent: #00f5ff;
+  --accent-soft: rgba(0, 245, 255, 0.1);
+  --text-primary: #e6edf3;
+  --text-secondary: #94a3b8;
+  --border-tech: rgba(0, 245, 255, 0.2);
+
   /* Fonts */
-  --default-font: "Roboto", system-ui, sans-serif;   /* cuerpo */
-  --heading-font: "Raleway", sans-serif;            /* headings */
-  --nav-font: "Poppins", sans-serif;               /* nav */
+  --default-font: "Poppins", system-ui, sans-serif;
+  /* cuerpo */
+  --heading-font: "Orbitron", sans-serif;
+  /* headings */
+  --nav-font: "Orbitron", sans-serif;
+  /* nav */
 
   /* Global colors */
-  --background-color: #070b14;    /* fondo principal */
-  --surface-color: #0f1529;       /* tarjetas y secciones */
-  --default-color: #cfd3ec;       /* texto normal */
-  --heading-color: #ffffff;       /* títulos */
-  --accent-color: #38bdf8;        /* acento azul cyan */
-  --contrast-color: #070b14;      /* texto sobre acento */
+  --background-color: #070b14;
+  /* fondo principal */
+  --surface-color: #0f1529;
+  /* tarjetas y secciones */
+  --default-color: #cfd3ec;
+  /* texto normal */
+  --heading-color: #ffffff;
+  /* títulos */
+  --accent-color: #38bdf8;
+  /* acento azul cyan */
+  --contrast-color: #070b14;
+  /* texto sobre acento */
 
   /* Nav colors */
   --nav-color: #cfd3ec;
@@ -76,9 +94,32 @@ a:hover {
   color: rgba(56, 189, 248, 0.75);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.sitename,
+.navmenu a {
   font-family: var(--heading-font);
-  color: var(--heading-color);
+}
+
+h1,
+h2 {
+  text-shadow: 0 0 18px rgba(56, 189, 248, 0.15);
+}
+
+.hero h2 {
+  text-shadow: 0 0 25px rgba(56, 189, 248, 0.35);
+}
+
+h1,
+h2,
+h3,
+.sitename,
+.navmenu a {
+  letter-spacing: 1px;
 }
 
 /* PHP Email Form Messages
@@ -132,6 +173,7 @@ h1, h2, h3, h4, h5, h6 {
     transform: rotate(360deg);
   }
 }
+
 /* #endregion - General Styling & Shared Classes */
 
 /* #region - GLOBAL */
@@ -150,7 +192,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   font-size: 30px;
   font-weight: 700;
-  margin:0;
+  margin: 0;
   color: var(--heading-color);
 }
 
@@ -222,18 +264,6 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.3s;
   }
 
-  .navmenu>ul>li>a:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    bottom: -6px;
-    left: 0;
-    background-color: var(--nav-hover-color);
-    visibility: hidden;
-    width: 0px;
-    transition: all 0.3s ease-in-out 0s;
-  }
-
   .navmenu a:hover:before,
   .navmenu li:hover>a:before,
   .navmenu .active:before {
@@ -302,6 +332,42 @@ h1, h2, h3, h4, h5, h6 {
     left: -100%;
     visibility: visible;
   }
+}
+
+/* NAV mejorado TECH */
+.header {
+  backdrop-filter: blur(10px);
+  background: rgba(5, 10, 25, 0.85);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.header .sitename {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 2px;
+  color: var(--accent-color);
+  text-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+.navmenu ul li a {
+  position: relative;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navmenu ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent-color);
+  transition: 0.3s ease;
+}
+
+.navmenu ul li a:hover::after,
+.navmenu ul li a.active::after {
+  width: 70%;
 }
 
 /* Mobile Navigation */
@@ -434,12 +500,22 @@ h1, h2, h3, h4, h5, h6 {
 # Global Footer
 --------------------------------------------------------------*/
 .footer {
+  border-top: 1px solid rgba(56, 189, 248, 0.2);
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.95),
+      rgba(10, 15, 30, 1));
+  position: relative;
   color: var(--default-color);
   background-color: var(--background-color);
   font-size: 14px;
   text-align: center;
   padding: 30px 0;
-  position: relative;
+}
+
+.footer-tech {
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: #9ca3af;
 }
 
 .footer h3 {
@@ -474,12 +550,13 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   width: 36px;
   height: 36px;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .footer .social-links a:hover {
   background: color-mix(in srgb, var(--accent-color), transparent 20%);
   text-decoration: none;
+  transform: translateY(-3px);
 }
 
 .footer .copyright {
@@ -490,6 +567,32 @@ h1, h2, h3, h4, h5, h6 {
 .footer .credits {
   font-size: 13px;
   padding-top: 5px;
+}
+
+/* ===================================
+   CUSTOM SCROLLBAR TECH STYLE
+=================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg,
+      var(--accent-color),
+      rgba(56, 189, 248, 0.4));
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg,
+      #00f5ff,
+      var(--accent-color));
 }
 
 /*--------------------------------------------------------------
@@ -614,6 +717,22 @@ h1, h2, h3, h4, h5, h6 {
   color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
 
+/* Breadcrums Tech */
+.breadcrumbs {
+  background: rgba(10, 15, 30, 0.6);
+  border-top: 1px solid rgba(56, 189, 248, 0.1);
+  border-bottom: 1px solid rgba(56, 189, 248, 0.1);
+}
+
+.breadcrumbs ol li a {
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.breadcrumbs ol li.current {
+  color: #94a3b8;
+}
+
 /*--------------------------------------------------------------
 # Global Sections
 --------------------------------------------------------------*/
@@ -672,6 +791,7 @@ section,
   text-transform: uppercase;
   font-family: var(--heading-font);
 }
+
 /* #endregion - GLOBAL */
 
 /* #region - About+Resume Section*/
@@ -764,31 +884,125 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about .content h2 {
-  font-weight: 700;
-  font-size: 24px;
+.about img {
+  border-radius: 20px;
+  border: 2px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.2);
 }
 
-.about .content ul {
+.about ul {
+  background: rgba(15, 23, 42, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(56, 189, 248, 0.1);
   list-style: none;
-  padding: 0;
 }
 
-.about .content ul li {
-  margin-bottom: 20px;
-  display: flex;
-  align-items: center;
+.about ul li {
+  margin-bottom: 10px;
+  font-size: 14px;
 }
 
-.about .content ul strong {
-  margin-right: 10px;
-}
-
-.about .content ul i {
-  font-size: 16px;
-  margin-right: 5px;
+.about ul li strong {
   color: var(--accent-color);
-  line-height: 0;
+  font-weight: 500;
+}
+
+.about h2 {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
+  color: var(--accent-color);
+}
+
+.about p {
+  text-align: justify;
+}
+
+/* =========================
+   Languages Section
+========================= */
+.language-tech-card {
+  background: linear-gradient(145deg, #0f172a, #0b1120);
+  padding: 25px;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 255, 255, 0.08);
+  transition: 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.language-tech-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.15);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.language-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.language-header h3 {
+  font-size: 20px;
+  margin: 0;
+  color: #fff;
+}
+
+.badge-native,
+.badge-b2 {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.badge-native {
+  background: rgba(0, 255, 153, 0.15);
+  color: #00ff99;
+  border: 1px solid rgba(0, 255, 153, 0.4);
+}
+
+.badge-b2 {
+  background: rgba(77, 166, 255, 0.15);
+  color: #4da6ff;
+  border: 1px solid rgba(77, 166, 255, 0.4);
+}
+
+/* Barra */
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  border-radius: 10px;
+  animation: loadBar 1.8s ease forwards;
+}
+
+.native-fill {
+  width: 100%;
+  background: linear-gradient(90deg, #00ff99, #00ffaa);
+  box-shadow: 0 0 10px #00ff99;
+}
+
+.b2-fill {
+  width: 75%;
+  background: linear-gradient(90deg, #4da6ff, #5cc8ff);
+  box-shadow: 0 0 10px #4da6ff;
+}
+
+@keyframes loadBar {
+  from {
+    width: 0;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -801,7 +1015,7 @@ section,
   padding: 28px 20px;
   text-align: center;
   transition: all 0.3s ease;
-  box-shadow: 0 0 0 rgba(0,0,0,0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 .stack-card:hover {
@@ -879,6 +1093,7 @@ section,
   margin-top: 0.25rem;
   color: var(--default-color);
 }
+
 /* #endregion - About+Resume Section */
 
 /* #region - Portfolio Section */
@@ -926,11 +1141,16 @@ section,
 
 .portfolio .portfolio-content {
   position: relative;
+  height: 260px;
   overflow: hidden;
+  border-radius: 12px;
 }
 
 .portfolio .portfolio-content img {
-  transition: 0.3s;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
 .portfolio .portfolio-content .portfolio-info {
@@ -991,12 +1211,34 @@ section,
 }
 
 .portfolio .portfolio-content:hover img {
-  transform: scale(1.1);
+  transform: scale(0.9);
 }
 
 /*--------------------------------------------------------------
 # Portfolio Details Section
 --------------------------------------------------------------*/
+.portfolio-info,
+.portfolio-description {
+  border-radius: 12px;
+  transition: 0.3s ease;
+}
+
+#project-description p {
+  text-align: justify;
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.portfolio-info:hover,
+.portfolio-description:hover {
+  transform: translateY(-4px);
+}
+
+.portfolio-details .btn-primary {
+  border-radius: 10px;
+}
+
+
 .portfolio-details .portfolio-details-slider img {
   width: 100%;
 }
@@ -1055,6 +1297,7 @@ section,
   padding: 0;
   color: color-mix(in srgb, var(--default-color), transparent 30%);
 }
+
 /* #endregion - Portfolio Section */
 
 /* #region - Contact Section */
@@ -1155,7 +1398,7 @@ section,
 }
 
 .contact .php-email-form {
-  
+
   padding: 40px 35px;
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
@@ -1166,7 +1409,8 @@ section,
 .contact .php-email-form input[type=email],
 .contact .php-email-form textarea {
   width: 100%;
-  background-color: rgba(15, 21, 41, 0.8); /* oscuro translúcido */
+  background-color: rgba(15, 21, 41, 0.8);
+  /* oscuro translúcido */
   border: 1px solid rgba(207, 211, 236, 0.3);
   padding: 14px 18px;
   margin-bottom: 20px;
@@ -1212,6 +1456,7 @@ section,
   box-shadow: 0 8px 20px rgba(56, 189, 248, 0.6);
   background: linear-gradient(135deg, rgba(56, 189, 248, 0.8), var(--accent-color));
 }
+
 /*#endregion - Contact Section */
 
 /* #region - PRODUCTO */
@@ -1243,7 +1488,7 @@ section,
   background: linear-gradient(145deg, #111, var(--surface-color));
   padding: 30px;
   border-radius: 22px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -1272,13 +1517,13 @@ section,
 }
 
 .btn-primary {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.35);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
   transition: transform .2s ease, box-shadow .2s ease;
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
 }
 
 
@@ -1335,11 +1580,11 @@ section,
 }
 
 /* Tarjeta base */
-.pro-contra > div {
+.pro-contra>div {
   background: linear-gradient(145deg, var(--surface-color), #0b1020);
   border-radius: 18px;
   padding: 25px 30px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.45);
 }
 
 /* Títulos */
@@ -1476,17 +1721,17 @@ section,
 /* ---------- MEJORAS VISUALES ---------- */
 
 .product-page h1 {
-  text-shadow: 0 0 18px rgba(56,189,248,0.25);
+  text-shadow: 0 0 18px rgba(56, 189, 248, 0.25);
 }
 
 .product-price {
-  text-shadow: 0 0 14px rgba(56,189,248,0.35);
+  text-shadow: 0 0 14px rgba(56, 189, 248, 0.35);
 }
 
 /* ---------- INDICADOR DE TAB MÁS PRO ---------- */
 
 .product-tabs {
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .product-tabs .nav-link {
@@ -1502,7 +1747,7 @@ section,
   height: 2px;
   background: var(--accent-color);
   transform: translateX(-50%);
-  transition: width 0.35s cubic-bezier(.4,0,.2,1);
+  transition: width 0.35s cubic-bezier(.4, 0, .2, 1);
 }
 
 .product-tabs .nav-link.active::after {
@@ -1522,13 +1767,13 @@ section,
   background: linear-gradient(145deg, #0f1117, #1c1c1c);
   border-radius: 16px;
   padding: 20px 25px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .spec-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 18px 30px rgba(0,0,0,0.45);
+  box-shadow: 0 18px 30px rgba(0, 0, 0, 0.45);
 }
 
 /* TITULO CARD */
@@ -1552,7 +1797,7 @@ section,
 
 .spec-card li {
   padding: 6px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   font-size: 0.9rem;
   color: var(--default-color);
 }
@@ -1566,4 +1811,408 @@ section,
   font-size: 1.1rem;
   color: var(--accent-color);
 }
+
 /* #endregion - PRODUCTO*/
+
+/* #region - ANIMACION */
+.solar-page {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  height: 100vh;
+  background: radial-gradient(circle at center, #0b1026 0%, #000 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.solar-system {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Estrellas */
+.stars,
+.stars2,
+.stars3 {
+  position: absolute;
+  width: 2000px;
+  height: 2000px;
+  background: transparent;
+  animation: moveStars 200s linear infinite;
+}
+
+.stars::after,
+.stars2::after,
+.stars3::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  box-shadow:
+    50px 200px white,
+    150px 400px white,
+    300px 900px white,
+    500px 1200px white,
+    700px 300px white,
+    900px 800px white,
+    1100px 500px white,
+    1300px 1400px white,
+    1500px 600px white,
+    1700px 1000px white,
+    1900px 200px white,
+    400px 1600px white,
+    800px 1800px white,
+    1200px 1700px white,
+    1600px 1500px white;
+}
+
+.stars2 {
+  animation-duration: 300s;
+  opacity: 0.6;
+}
+
+.stars3 {
+  animation-duration: 400s;
+  opacity: 0.3;
+}
+
+@keyframes moveStars {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-1000px);
+  }
+}
+
+.universe {
+  position: relative;
+  width: 900px;
+  height: 900px;
+}
+
+.sun {
+  position: absolute;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, #fff176 0%, #ff9800 60%, #ff5722 100%);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: pulse 4s ease-in-out infinite;
+  box-shadow: 0 0 80px #ff9800;
+}
+
+@keyframes pulse {
+
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.orbit {
+  position: absolute;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+}
+
+/* Tamaños + velocidades reales aproximadas */
+.orbit-mercury {
+  width: 200px;
+  height: 200px;
+  margin: -100px;
+  animation: rotate 5s linear infinite;
+}
+
+.orbit-venus {
+  width: 260px;
+  height: 260px;
+  margin: -130px;
+  animation: rotate 8s linear infinite;
+}
+
+.orbit-earth {
+  width: 340px;
+  height: 340px;
+  margin: -170px;
+  animation: rotate 12s linear infinite;
+}
+
+.orbit-mars {
+  width: 420px;
+  height: 420px;
+  margin: -210px;
+  animation: rotate 18s linear infinite;
+}
+
+.orbit-jupiter {
+  width: 520px;
+  height: 520px;
+  margin: -260px;
+  animation: rotate 30s linear infinite;
+}
+
+.orbit-saturn {
+  width: 620px;
+  height: 620px;
+  margin: -310px;
+  animation: rotate 40s linear infinite;
+}
+
+.orbit-uranus {
+  width: 720px;
+  height: 720px;
+  margin: -360px;
+  animation: rotate 55s linear infinite;
+}
+
+.orbit-neptune {
+  width: 820px;
+  height: 820px;
+  margin: -410px;
+  animation: rotate 70s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+/* Mercurio */
+.mercury {
+  width: 10px;
+  height: 10px;
+  background: #b1b1b1;
+}
+
+/* Venus */
+.venus {
+  width: 16px;
+  height: 16px;
+  background: linear-gradient(45deg, #d4a373, #b08968);
+}
+
+/* Tierra */
+.earth {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-50%, -50%);
+
+  background:
+    /* continentes */
+    radial-gradient(circle at 65% 40%, #2e7d32 8%, transparent 9%),
+    radial-gradient(circle at 30% 60%, #2e7d32 10%, transparent 11%),
+    radial-gradient(circle at 50% 30%, #2e7d32 6%, transparent 7%),
+    /* océano */
+    radial-gradient(circle at center, #2196f3 60%, #0d47a1 100%);
+
+  box-shadow:
+    0 0 8px #4fc3f7,
+    inset -4px -4px 6px rgba(0, 0, 0, 0.5);
+
+  animation: earth-spin 10s linear infinite;
+}
+
+@keyframes earth-spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Marte */
+.mars {
+  width: 14px;
+  height: 14px;
+  background: radial-gradient(circle, #d84315 60%, #8d2b0b 100%);
+}
+
+/* Júpiter */
+.jupiter {
+  width: 40px;
+  height: 40px;
+  background:
+    repeating-linear-gradient(0deg,
+      #d2b48c,
+      #d2b48c 5px,
+      #a1887f 5px,
+      #a1887f 10px);
+  border-radius: 50%;
+}
+
+/* Saturno */
+.saturn {
+  width: 32px;
+  height: 32px;
+  background: #e0c097;
+  position: relative;
+}
+
+.ring {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 3px solid rgba(200, 200, 200, 0.6);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Urano */
+.uranus {
+  width: 22px;
+  height: 22px;
+  background: #80deea;
+}
+
+/* Neptuno */
+.neptune {
+  width: 22px;
+  height: 22px;
+  background: #1565c0;
+}
+
+/* Cometa */
+.comet-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.comet {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+
+  offset-path: path("M -200 600 Q 400 200 1200 100");
+  animation: cometFlight 10s cubic-bezier(.4, 0, .2, 1) infinite;
+
+  z-index: 60;
+}
+
+.comet-core {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+
+  background: radial-gradient(circle,
+      #ffffff 0%,
+      #ffe8b0 30%,
+      #ff8c00 60%,
+      #ff4500 100%);
+
+  box-shadow:
+    0 0 20px #ffae00,
+    0 0 60px rgba(255, 140, 0, 0.8),
+    0 0 120px rgba(255, 60, 0, 0.6);
+}
+
+.comet-tail {
+  position: absolute;
+  top: 50%;
+  left: -200px;
+  width: 200px;
+  height: 8px;
+  transform: translateY(-50%);
+
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 200, 100, 0.7),
+      rgba(255, 100, 0, 0.5),
+      rgba(255, 0, 0, 0));
+
+  filter: blur(4px);
+  opacity: 0.8;
+}
+
+.comet-particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.comet-particles::before,
+.comet-particles::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 200, 150, 0.8);
+  box-shadow: 0 0 10px orange;
+  animation: particleFade 1.5s infinite ease-out;
+}
+
+.comet-particles::after {
+  top: 10px;
+  left: -20px;
+  animation-delay: 0.5s;
+}
+
+@keyframes particleFade {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.3);
+    opacity: 0;
+  }
+}
+
+@keyframes cometFlight {
+  0% {
+    offset-distance: 0%;
+    transform: rotate(0deg) scale(0.6);
+  }
+
+  40% {
+    transform: rotate(15deg) scale(1);
+  }
+
+  100% {
+    offset-distance: 100%;
+    transform: rotate(25deg) scale(0.8);
+  }
+}
+
+/* #endregion - ANIMACION */

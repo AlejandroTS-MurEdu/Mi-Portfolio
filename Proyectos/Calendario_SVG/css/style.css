@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding: 0%;
+}
+
+body {
+  background-image: url("../Fondo_Calendario.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
+
+.pixel-font {
+  font-family: "Press Start 2P", monospace;
+}
+
+.day {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  perspective: 800px;
+  padding: 3px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  background-color: purple;
+  border-radius: 10px;
+}
+
+.day .door {
+  position: absolute;
+  inset: 0;
+
+  background-color: #1b5e3c;
+  border: 4px solid #0a2e1d;
+  border-radius: 6px;
+
+  box-shadow:
+    inset -4px -4px 0 rgba(0, 0, 0, 0.35),
+    inset 4px 4px 0 rgba(255, 255, 255, 0.08);
+
+  image-rendering: pixelated;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transform-origin: left center;
+  transition: transform 0.8s steps(6);
+
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+}
+
+.day.variant-a .door {
+  background-color: #1b5e3c;
+  background-image: repeating-linear-gradient(45deg,
+      rgba(255, 255, 255, 0.05) 0px,
+      rgba(255, 255, 255, 0.05) 4px,
+      transparent 4px,
+      transparent 8px);
+}
+
+.day.variant-b .door {
+  background-color: #7a1f2b;
+  border-color: #3a0c12;
+  background-image: repeating-linear-gradient(-45deg,
+      rgba(255, 255, 255, 0.06) 0px,
+      rgba(255, 255, 255, 0.06) 4px,
+      transparent 4px,
+      transparent 8px);
+}
+
+.day:nth-child(odd) {
+  --variant: a;
+}
+
+.day:nth-child(even) {
+  --variant: b;
+}
+
+.day:nth-child(odd) .door {
+  background-color: #1b5e3c;
+}
+
+.day:nth-child(even) .door {
+  background-color: #7a1f2b;
+}
+
+.day .door span {
+  font-family: "Press Start 2P", monospace;
+  font-size: 18px;
+  color: #f5f5f5;
+  text-shadow: 2px 2px 0 #000;
+  pointer-events: none;
+}
+
+.day:hover .door {
+  transform: rotateY(-100deg);
+}
+
+.day svg {
+  position: relative;
+  z-index: 1;
+}
+
+.day.largo_uno {
+  width: 110px;
+  height: 240px;
+  margin: 3px;
+}
+
+.day.largo_dos {
+  width: 240px;
+  height: 120px;
+}
+
+#calendario {
+  padding-top: 20px;
+  margin: 0 auto;
+  max-width: 800px;
+  display: grid;
+
+  grid-template-columns: repeat(2, 400px);
+  grid-template-areas:
+    "uno tres"
+    "dos cuatro";
+
+  justify-content: center;
+  gap: 5px;
+}
+
+h1 {
+  font-family: "Press Start 2P", monospace;
+  font-size: 25px;
+  color: #ffde59;
+  text-shadow:
+    3px 3px 0 #000,
+    0 0 10px #ff004c;
+  letter-spacing: 2px;
+
+  position: absolute;
+  top: 60px;
+  left: 352px;
+  z-index: 20;
+}
+
+
+#uno div:first-child {
+  max-width: 400px;
+  grid-area: intro;
+}
+
+.dia_uno {
+  grid-area: dia_uno;
+}
+
+.dia_dos {
+  grid-area: dia_dos;
+}
+
+.head {
+  fill: #cd803d;
+}
+
+.eye {
+  fill: white;
+}
+
+.mouth {
+  fill: none;
+  stroke: white;
+  stroke-width: 2px;
+}
+
+.limb {
+  stroke: #cd803d;
+  stroke-width: 35px;
+  stroke-linecap: round;
+}
+
+.dia_tres {
+  grid-area: dia_tres;
+}
+
+.dia_cuatro {
+  stroke: black;
+  stroke-width: 2px;
+  fill: white;
+  grid-area: dia_cuatro;
+}
+
+.dia_cuatro .roof {
+  fill: none;
+  stroke: #d1495b;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+
+.dia_cuatro .doorr {
+  fill: #d1495b;
+}
+
+.dia_cuatro .stair {
+  fill: gray;
+}
+
+.dia_cuatro .window {
+  fill: #fdea96;
+}
+
+.dia_cuatro .window-sill {
+  fill: #d1495b;
+  stroke-linecap: round;
+}
+
+.dia_cinco {
+  grid-area: dia_cinco;
+}
+
+#uno {
+  max-width: 400px;
+  grid-area: uno;
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 120px);
+
+  gap: 10px;
+
+  grid-template-areas:
+    "dia_uno dia_dos dia_tres"
+    "dia_cuatro dia_dos dia_cinco";
+
+  align-items: stretch;
+  justify-items: stretch;
+  padding-top: 118px;
+}
+
+#uno .day {
+  width: 100px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.dia_seis {
+  grid-area: dia_seis;
+}
+
+.box {
+  fill: #d1495b;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.stripe {
+  fill: white;
+  stroke: black;
+  stroke-width: 2px;
+}
+
+.ribbon {
+  stroke: #b73a3b;
+  stroke-width: 4px;
+  fill: none;
+}
+
+.dia_siete {
+  grid-area: dia_siete;
+}
+
+.bear {
+  background-color: #f5eed7;
+}
+
+.bear .ear {
+  fill: #e5c39c;
+  stroke: white;
+  stroke-width: 5;
+}
+
+.bear .face {
+  fill: white;
+}
+
+.bear .mouth {
+  fill: none;
+  stroke: black;
+  stroke-width: 2;
+}
+
+.dia_ocho {
+  grid-area: dia_ocho;
+}
+
+.dia_nueve {
+  grid-area: dia_nueve;
+}
+
+.dia_veintiuno {
+  grid-area: dia_veintiuno;
+}
+
+.arm {
+  stroke: black;
+  stroke-width: 7;
+  stroke-linecap: round;
+}
+
+#head {
+  cursor: grab;
+}
+
+.dia_veintidos {
+  grid-area: dia_veintidos;
+}
+
+#dos {
+  max-width: 400px;
+  grid-area: dos;
+  display: grid;
+  grid-template-areas:
+    'dia_seis dia_siete dia_nueve'
+    'dia_seis dia_ocho dia_nueve'
+    'dia_veintiuno dia_veintidos dia_veintidos';
+}
+
+.dia_diez {
+  grid-area: dia_diez;
+}
+
+.dia_once {
+  grid-area: dia_once;
+}
+
+.dia_doce {
+  grid-area: dia_doce;
+}
+
+.dia_trece {
+  grid-area: dia_trece;
+}
+
+#windmill-head {
+  animation-name: rotate;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.dia_catorce {
+  grid-area: dia_catorce;
+}
+
+#bell {
+  transform-origin: 0 -45px;
+}
+
+svg:hover #bell,
+svg:hover #bell-clapper {
+  animation-duration: 0.5s;
+  animation-delay: -0.25s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-name: ring;
+}
+
+@keyframes ring {
+  from {
+    transform: rotate(-20deg);
+  }
+
+  to {
+    transform: rotate(20deg);
+  }
+}
+
+.dia_quince {
+  grid-area: dia_quince;
+}
+
+.sleigh {
+  offset-path: path("M-200 80 L -90 80 Q 60 80 60 -10 A 50 50 0 0 0 -60 -10 Q -60 80 90 80 L 200 80"
+    );
+  animation: roller-coaster 6000ms infinite linear;
+}
+
+@keyframes roller-coaster {
+  0% {
+    offset-distance: 0%;
+  }
+
+  100% {
+    offset-distance: 100%;
+  }
+}
+
+.dia_dieciseis {
+  grid-area: dia_dieciseis;
+}
+
+#tres {
+  max-width: 400px;
+  grid-area: tres;
+  display: grid;
+  grid-template-areas:
+    'dia_diez dia_once dia_catorce'
+    'dia_doce dia_trece dia_catorce'
+    'dia_quince dia_dieciseis dia_dieciseis';
+}
+
+.dia_diecisiete {
+  grid-area: dia_diecisiete;
+}
+
+.sobreMi {
+  grid-area: hueco;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-color: transparent;
+}
+
+.sobreMi a {
+  font-family: "Press Start 2P", monospace;
+  font-size: 17px;
+  color: #ffde59;
+  text-decoration: none;
+  padding: 42px 10px;
+  background: #7a1f2b;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  transition: transform 0.1s steps(2);
+  border-radius: 10px;
+}
+
+.sobreMi a:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+
+.dia_dieciocho {
+  grid-area: dia_dieciocho;
+}
+
+.dia_diecinueve {
+  grid-area: dia_diecinueve;
+  align-self: center center;
+}
+
+.dia_veinte {
+  grid-area: dia_veinte;
+}
+
+.snowflake2 {
+  fill: #dbdbdb;
+  stroke: #00A1FF;
+  stroke-width: 2;
+}
+
+.dia_veintitres {
+  grid-area: dia_veintitres;
+}
+
+.snowflake {
+  fill: #ffffff;
+  stroke: #7c7c7c;
+  stroke-width: 2;
+  --duration: 5s;
+}
+
+.snowflake.fast {
+  --duration: 3s;
+}
+
+.snowflake {
+  animation-duration: var(--duration);
+  animation-name: snowing;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-delay: calc(-1 * var(--duration) * (var(--y) / 200));
+}
+
+@keyframes snowing {
+  from {
+    transform: translate(0, -100px);
+  }
+
+  to {
+    transform: translate(0, 100px);
+  }
+}
+
+.dia_veinticuatro {
+  grid-area: dia_veinticuatro;
+}
+
+#cuatro {
+  max-width: 400px;
+  grid-area: cuatro;
+  display: grid;
+  grid-template-areas:
+    'dia_diecisiete hueco dia_veinte'
+    'dia_dieciocho dia_diecinueve dia_veinte'
+    'dia_veintitres dia_veinticuatro .';
+}
+
+svg {
+  border-color: transparent;
+}

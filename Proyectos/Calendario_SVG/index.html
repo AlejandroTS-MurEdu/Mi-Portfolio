@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendario-8Bit</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div id="calendario">
+    <div id="uno">
+      <div>
+        <h1>Calendario SVG</h1>
+      </div>
+
+      <!-- DÍA 1 -->
+      <div class="day alt normal dia_uno">
+        <div class="door">
+          <span>1</span>
+        </div>
+        <svg viewBox="0 0 120 120">
+          <circle cx="60" cy="70" r="42" fill="#D1495B" />
+          <rect x="48.4" y="15" width="25" height="15" fill="#F79257" />
+          <circle cx="61" cy="9" r="6" fill="none" stroke="#F79257" stroke-width="1.2" />
+        </svg>
+      </div>
+
+      <!-- DÍA 2 (LARGO) -->
+      <div class="day largo_uno dia_dos">
+        <div class="door">
+          <span>2</span>
+        </div>
+        <svg viewBox="-100 -200 200 400">
+          <rect x="-20" y="100" width="45" height="40" fill="brown" />
+          <polygon points="0,-10 80,110 -80,110" fill="#234236" />
+          <polygon points="0,-50 60,50 -60,50" fill="#0C5C4C" />
+          <polygon points="0,-90 40,-10 -40,-10" fill="#38755B" />
+        </svg>
+      </div>
+
+      <!-- DÍA 3 -->
+      <div class="day normal dia_tres">
+        <div class="door">
+          <span>3</span>
+        </div>
+        <svg viewBox="-100 -100 200 200">
+          <circle class="head" cx="0" cy="-50" r="30" />
+          <circle class="eye" cx="-12" cy="-55" r="3" />
+          <circle class="eye" cx="12" cy="-55" r="3" />
+          <rect class="mouth" x="-10" y="-40" width="20" height="5" rx="2" />
+          <line class="limb" x1="-40" y1="-10" x2="40" y2="-10" />
+          <line class="limb" x1="-25" y1="50" x2="0" y2="-15" />
+          <line class="limb" x1="25" y1="50" x2="0" y2="-15" />
+          <circle cx="0" cy="-10" r="5" />
+          <circle cx="0" cy="10" r="5" />
+        </svg>
+      </div>
+
+      <!-- DÍA 4 -->
+      <div class="day normal dia_cuatro">
+        <div class="door">
+          <span>4</span>
+        </div>
+        <svg viewBox="-100 -100 200 200">
+          <polygon class="wall" points="-65,80 -65,-10 0,-70 65,-10 65,80" />
+          <polyline class="roof" points="-75,-8 0,-78 75,-8" />
+          <rect class="doorr" x="-45" y="10" width="30" height="60" rx="2" />
+          <circle class="door-knob" cx="-35" cy="40" r="2" />
+          <rect class="stair" x="-47" y="70" width="34" height="5" />
+          <rect class="stair" x="-49" y="75" width="38" height="5" />
+          <rect class="window" x="5" y="15" width="40" height="35" rx="5" />
+          <line x1="5" y1="32.5" x2="45" y2="32.5" />
+          <line x1="25" y1="15" x2="25" y2="50" />
+          <rect class="window-sill" x="2" y="48" width="46" height="5" rx="5" />
+          <circle class="window" cx="0" cy="-25" r="15" />
+          <line x1="-15" y1="-25" x2="15" y2="-25" />
+          <line x1="0" y1="-40" x2="0" y2="-10" />
+        </svg>
+      </div>
+
+      <!-- DÍA 5 -->
+      <div class="day alt normal dia_cinco">
+        <div class="door">
+          <span>5</span>
+        </div>
+        <svg viewBox="-100 -100 200 200">
+          <path d="M -70 0 L 70 0 L 30 -50 M 70 0 L 30 50" fill="none" stroke="#D1495B" stroke-width="25"
+            stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </div>
+    </div>
+
+    <div id="dos">
+      <!-- DÍA 6 -->
+      <div class="day largo_uno dia_seis">
+        <div class="door"><span>6</span></div>
+        <svg viewBox="-100 -200 200 400">
+          <path d="
+      M 0 -80
+      Q 5 -75 0 -70
+      Q -10 -65 0 -60
+      Q 15 -55 0 -50
+      Q -20 -45 0 -40
+      Q 25 -35 0 -30
+      Q -30 -25 0 -20
+      Q 35 -15 0 -10
+      Q -40 -5 0 0
+      Q 45 5 0 10
+      Q -50 15 0 20
+      Q 55 25 0 30
+      Q -60 35 0 40
+      Q 65 45 0 50
+      Q -70 55 0 60
+      Q 75 65 0 70
+      Q -80 75 0 80
+      Q 85 85 0 90
+      Q -90 95 0 100
+      Q 95 105 0 110
+      Q -100 115 0 120
+      L 0 140
+      L 20 140
+      L -20 140" fill="none" stroke="#0C5C4C" stroke-width="5" />
+        </svg>
+      </div>
+
+      <!-- DÍA 7 -->
+      <div class="day alt normal dia_siete">
+        <div class="door"><span>7</span></div>
+        <svg viewBox="-100 -100 200 200">
+          <circle cx="0" cy="-50" r="10" fill="#a9172a" />
+          <rect class="box" x="-60" y="-40" width="120" height="100" />
+          <rect class="box" x="-70" y="-47" width="140" height="20" />
+          <rect class="stripe" x="-20" y="-40" width="40" height="100" />
+          <rect class="stripe" x="-25" y="-47" width="50" height="20" />
+          <path class="ribbon" d="M 0 -50 L 30 -50 C 50 -50 50 -70 30 -65 L 0 -50" />
+          <path class="ribbon" d="M 0 -50 L -30 -50 C -50 -50 -50 -70 -30 -65 L 0 -50" />
+        </svg>
+      </div>
+
+      <!-- DÍA 8 -->
+      <div class="day normal dia_ocho">
+        <div class="door"><span>8</span></div>
+        <svg class="bear" viewBox="-100 -100 200 200">
+          <circle class="ear" cx="-40" cy="-50" r="18" />
+          <circle class="ear" cx="40" cy="-50" r="18" />
+          <rect class="face" x="-55" y="-60" width="110" height="120" rx="50" ry="30" />
+          <circle cx="20" cy="-30" r="3" />
+          <circle cx="-20" cy="-30" r="3" />
+          <path d="M -30 0 C -30 -25 30 -25 30 0 L 30 30 Q 30 40 20 40 L -20 40 Q -30 40 -30 30" fill="#E5C39C" />
+          <path d="M -10 0 L 10 0 C 10 20 -10 20 -10 0" />
+          <path class="mouth" d="M 0 10 Q 0 25 10 25 M 0 10 Q 0 25 -10 25" />
+        </svg>
+      </div>
+
+      <!-- DÍA 9 -->
+      <div class="day largo_uno dia_nueve">
+        <div class="door"><span>9</span></div>
+        <svg viewBox="-100 -200 200 400">
+          <path d="M 50 120 L 50 -80 A 50 50 0 0 0 -50 -80" fill="none" stroke="black" stroke-width="45"
+            stroke-linecap="round" />
+          <path d="M 50 120 L 50 -80 A 50 50 0 0 0 -50 -80" fill="none" stroke="red" stroke-width="35"
+            stroke-linecap="round" />
+          <path d="M 50 120 L 50 -80 A 50 50 0 0 0 -50 -80" fill="none" stroke="white" stroke-width="35"
+            stroke-dasharray="30 30" />
+        </svg>
+      </div>
+
+      <!-- DÍA 21 -->
+      <div class="day alt normal dia_veintiuno">
+        <div class="door"><span>21</span></div>
+        <svg viewBox="-100 -100 200 200">
+          <rect x="-100" y="-100" width="200" height="200" fill="#CD803D" />
+          <circle r="55" stroke="#FCCE7B" stroke-width="10" fill="white" />
+          <circle r="45" stroke="#B6705F" stroke-width="6" stroke-dasharray="6 17.56" fill="none" />
+          <g stroke="#5f4c6c" stroke-linecap="round">
+            <line id="hours" y2="-20" stroke-width="8" />
+            <line id="minutes" y2="-35" stroke-width="6" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- DÍA 22 -->
+      <div class="day largo_dos dia_veintidos">
+        <div class="door"><span>22</span></div>
+        <svg width="200" height="100">
+          <g transform="translate(70, 170)">
+            <g id="arm1" transform="rotate(-25)">
+              <!-- 1st arm -->
+              <path d="M 0 0 L 0 -70" class="arm" />
+              <circle r="5" />
+
+              <g transform="translate(0, -70)">
+                <g id="arm2" transform="rotate(50)">
+                  <!-- 2nd arm -->
+                  <path d="M 0 0 L 0 -70" class="arm" />
+                  <circle r="5" />
+
+                  <g transform="translate(0, -70)">
+                    <g id="arm3" transform="rotate(45)">
+                      <!-- 3rd arm -->
+                      <path d="M 0 0 L 0 -30" class="arm" />
+                      <circle r="5" />
+
+                      <g transform="translate(0, -30)">
+                        <g id="head" transform="rotate(-90)">
+                          <!-- Head -->
+                          <path d="M -30 30 Q 0 -20 30 30 Q 0 35 -30 30" fill="gray" />
+                          <circle cx="0" cy="25" r="10" fill="gold" />
+                          <path d="M -30 30 Q 0 -20 30 30 Q 0 25 -30 30" />
+                          <rect x="-10" y="-10" width="20" height="30" rx="5" />
+                        </g>
+                      </g>
+                    </g>
+                  </g>
+                </g>
+              </g>
+            </g>
+          </g>
+
+          <!-- Base -->
+          <ellipse cx="100" cy="175" rx="30" ry="5" />
+          <ellipse cx="100" cy="170" rx="30" ry="5" fill="gray" />
+        </svg>
+        <script>
+          const head = document.getElementById("head");
+          const arm1 = document.getElementById("arm1");
+          const arm2 = document.getElementById("arm2");
+          const arm3 = document.getElementById("arm3");
+
+          let arm1Rotation = -25;
+          let arm3Rotation = 45;
+
+          let newArm1Rotation = arm1Rotation;
+          let newArm3Rotation = arm3Rotation;
+
+          let isDragging = false;
+          let dragStartX, dragStartY;
+
+          head.addEventListener("mousedown", (e) => {
+            isDragging = true;
+            dragStartX = e.clientX;
+            dragStartY = e.clientY;
+          });
+
+          document.addEventListener("mousemove", (e) => {
+            if (!isDragging) return;
+
+            const dx = e.clientX - dragStartX;
+            const dy = e.clientY - dragStartY;
+
+            newArm1Rotation = Math.max(-60, Math.min(0, arm1Rotation - dy * 0.5));
+            newArm3Rotation = Math.max(-90, Math.min(90, arm3Rotation - dx * 0.8));
+
+            arm1.setAttribute("transform", `rotate(${newArm1Rotation})`);
+            arm2.setAttribute("transform", `rotate(${-newArm1Rotation * 2})`);
+            arm3.setAttribute("transform", `rotate(${newArm3Rotation})`);
+          });
+
+          document.addEventListener("mouseup", () => {
+            isDragging = false;
+
+            arm3Rotation = newArm3Rotation;
+            arm1Rotation = newArm1Rotation;
+          });
+        </script>
+      </div>
+    </div>
+
+    <div id="tres">
+      <!-- DÍA 10 -->
+      <div class="day alt normal dia_diez">
+        <div class="door"><span>10</span></div>
+        <svg viewBox="-100 -100 200 200">
+          <g transform="translate(0 5)">
+            <g>
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+            <g transform="rotate(72)">
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+            <g transform="rotate(-72)">
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+            <g transform="rotate(144)">
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+            <g transform="rotate(-144)">
+              <polygon points="0,0 36,-50 0,-100" fill="#EDD8B7" />
+              <polygon points="0,0 -36,-50 0,-100" fill="#E5C39C" />
+            </g>
+          </g>
+        </svg>
+      </div>
+
+      <!-- DÍA 11 -->
+      <div class="day normal dia_once">
+        <div class="door"><span>11</span></div>
+        <svg viewBox="-100 -100 200 200">
+          <path id="branch" d="
+      M 0 0 L 0 -90
+      M 0 -20 L 20 -34
+      M 0 -20 L -20 -34
+      M 0 -40 L 20 -54
+      M 0 -40 L -20 -54
+      M 0 -60 L 20 -74
+      M 0 -60 L -20 -74" stroke="#E5C39C" stroke-width="5" />
+          <use href="#branch" transform="rotate(60)" />
+          <use href="#branch" transform="rotate(120)" />
+          <use href="#branch" transform="rotate(180)" />
+          <use href="#branch" transform="rotate(240)" />
+          <use href="#branch" transform="rotate(300)" />
+        </svg>
+      </div>
+
+      <!-- DÍA 12 -->
+      <div class="day normal dia_doce">
+        <div class="door"><span>12</span></div>
+        <svg viewBox="-100 -100 200 200">
+          <defs>
+            <g id="tree">
+              <polygon points="-10,0 10,0 0 -50" fill="#38755b" />
+              <line x1="0" y1="0" x2="0" y2="10" stroke="#778074" stroke-width="2" />
+            </g>
+          </defs>
+
+          <rect x="-100" y="-100" width="200" height="200" fill="#F1DBC3" />
+          <circle cx="0" cy="380" r="350" fill="#F8F4E8" />
+
+          <use href="#tree" x="-30" y="25" transform="scale(2)" />
+          <use href="#tree" x="-20" y="40" transform="scale(1.2)" />
+          <use href="#tree" x="40" y="40" />
+          <use href="#tree" x="50" y="30" transform="scale(1.5)" />
+        </svg>
+      </div>
+
+      <!-- DÍA 13 -->
+      <div class="day normal dia_trece">
+        <div class="door"><span>13</span></div>
+        <svg viewBox="-100 -100 200 200" onclick="toggleLight()">
+          <path id="bulb" d="
+      M -30 20
+      A 50 50 0 1 1 30 20
+      Q 20 30 20 50
+      L -20 50
+      Q -20 30 -30 20" fill="transparent" stroke="black" stroke-width="10" stroke-linejoin="round" />
+          <path d="M -30 -20 A 30 30 0 0 1 0 -50" fill="none" stroke="black" stroke-width="10" stroke-linecap="round" />
+          <path d="M -18 62 L 18 62 M -15 75 L 15 75" stroke="black" stroke-width="10" stroke-linecap="round" />
+        </svg>
+      </div>
+
+      <!-- DÍA 14 -->
+      <div class="day largo_uno dia_catorce">
+        <div class="door"><span>14</span></div>
+        <svg viewBox="-100 -200 200 400" fill="rgba(0, 0, 0, 0.5)">
+          <g transform="translate(0, -50)">
+            <g id="windmill-head">
+              <circle r="8" />
+              <path id="arm" d="M -7 -20 C -7 -10 7 -10 7 -20 L 2 -80 L -2 -80" />
+              <use href="#arm" transform="rotate(120)" />
+              <use href="#arm" transform="rotate(-120)" />
+            </g>
+          </g>
+          <path d="M -7 100 L 7 100 L 3 -35 L -3 -35" />
+        </svg>
+      </div>
+
+      <!-- DÍA 15 -->
+      <div class="day normal dia_quince">
+        <div class="door"><span>15</span></div>
+        <svg viewBox="-100 -100 200 200">
+          <g id="bell" stroke="black" stroke-width="2">
+            <circle cx="0" cy="-45" r="7" fill="#4F6D7A" />
+            <circle id="bell-clapper" cx="0" cy="50" r="10" fill="#F79257" />
+            <path d="
+        M -50 40
+        L -50 50
+        L 50 50
+        L 50 40
+        Q 40 40 40 10
+        C 40 -60 -40 -60 -40 10
+        Q -40 40 -50 40" fill="#FDEA96" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- DÍA 16 -->
+      <div class="day alt largo_dos dia_dieciseis">
+        <div class="door"><span>16</span></div>
+        <svg viewBox="-200 -100 400 200" fill="none">
+          <path stroke="#E0CEB9" stroke-width="4"
+            d="M-200 80 L -80 80 Q 80 80 70 -10 A 70 70 0 0 0 -70 -10 Q -80 80 80 80 L 200 80" />
+          <g class="sleigh">
+            <path d="
+        M -30 -2 L 30 -2 A 10 10 0 0 0 30 -22
+        M -20 -2 L -20 -17
+        M 20 -2 L 20 -17" stroke="#AF6455" stroke-width="5" />
+            <path d="M -27 -17 L 27 -17" stroke="#7A504F" stroke-width="6" />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div id="cuatro">
+      <!-- DÍA 17 -->
+      <div class="day normal dia_diecisiete background">
+        <div class="door"><span>17</span></div>
+      </div>
+
+      <div class="sobreMi normal">
+        <a href="../../portfolio.html" class="pixel-font">8-Bit</a>
+      </div>
+
+      <!-- DÍA 18 -->
+      <div class="day alt normal dia_dieciocho">
+        <div class="door"><span>18</span></div>
+        <svg viewBox="-100 -100 200 200">
+          <path id="curve" d="M -80, 40 Q 0, 20 80, 40" fill="transparent" stroke="red" stroke-width="2" />
+          <text font-family="Arial" font-size="120" font-weight="bold" fill="white" stroke="black" stroke-width="2"
+            letter-spacing="-20">
+            <textPath href="#curve">svg</textPath>
+          </text>
+        </svg>
+      </div>
+
+      <!-- DÍA 19 -->
+      <div class="day normal dia_diecinueve">
+        <div class="door"><span>19</span></div>
+        <svg viewBox="-100 -100 200 200">
+          <clipPath id="ball">
+            <circle cx="0" cy="20" r="70" />
+          </clipPath>
+
+          <circle cx="0" cy="20" r="70" fill="#D1495B" />
+
+          <polyline clip-path="url(#ball)" points="-120 40 -80 0 -40 40 0 0 40 40 80 0 120 40" fill="none"
+            stroke="#9C2D2A" stroke-width="20" />
+
+          <circle cx="0" cy="-75" r="12" fill="none" stroke="#F79257" stroke-width="2" />
+          <rect x="-17.5" y="-65" width="35" height="20" fill="#F79257" />
+        </svg>
+      </div>
+
+      <!-- DÍA 20 -->
+      <div class="day largo_uno dia_veinte">
+        <div class="door"><span>20</span></div>
+        <svg viewBox="-100 -200 200 400" style="background-color: lightblue">
+          <defs>
+            <radialGradient id="snowball" cx="0.25" cy="0.25" r="1">
+              <stop offset="0%" stop-color="white" />
+              <stop offset="50%" stop-color="white" />
+              <stop offset="100%" stop-color="#d6d6d6" />
+            </radialGradient>
+          </defs>
+
+          <circle cx="0" cy="60" r="80" fill="url(#snowball)" />
+          <circle cx="0" cy="-40" r="50" fill="url(#snowball)" />
+          <polygon points="10,-46 50,-40 10,-34" fill="#e66465" />
+
+          <circle cx="0" cy="-55" r="5" />
+          <circle cx="20" cy="-55" r="5" />
+
+          <line x1="-40" y1="30" x2="-90" y2="-30" stroke="black" stroke-width="5" />
+          <line x1="-65" y1="0" x2="-90" y2="-10" stroke="black" stroke-width="5" />
+        </svg>
+      </div>
+
+      <!-- DÍA 23 -->
+      <div class="day normal dia_veintitres">
+        <div class="door"><span>23</span></div>
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="5" fill="#0077B6" />
+
+          <path d="M50 10 L50 90" class="snowflake2" />
+          <path d="M10 50 L90 50" class="snowflake2" />
+          <path d="M35 35 L65 65" class="snowflake2" />
+          <path d="M35 65 L65 35" class="snowflake2" />
+
+          <path d="M40 20 L60 40" class="snowflake2" />
+          <path d="M20 40 L40 60" class="snowflake2" />
+          <path d="M80 40 L60 60" class="snowflake2" />
+          <path d="M40 80 L60 60" class="snowflake2" />
+        </svg>
+      </div>
+
+      <!-- DÍA 24 -->
+      <div class="day special normal dia_veinticuatro">
+        <div class="door"><span>24</span></div>
+        <svg viewBox="-100 -100 200 200" class="snow-globe">
+          <defs>
+            <clipPath id="snow-globe-clip">
+              <circle cx="0" cy="0" r="80" />
+            </clipPath>
+          </defs>
+
+          <g clip-path="url(#snow-globe-clip)">
+            <rect x="-100" y="-100" width="200" height="200" fill="#F1DBC3" />
+            <circle cx="0" cy="380" r="350" fill="#F8F4E8" />
+
+            <g transform="scale(1.8) translate(-20 25)">
+              <polygon points="-10,0 10,0 0,-50" fill="#38755b" />
+              <line x2="0" y2="10" stroke="#778074" stroke-width="2" />
+            </g>
+
+            <g transform="scale(1) translate(-10 40)">
+              <polygon points="-10,0 10,0 0,-50" fill="#38755b" />
+              <line x2="0" y2="10" stroke="#778074" stroke-width="2" />
+            </g>
+
+            <g transform="scale(0.8) translate(30 40)">
+              <polygon points="-10,0 10,0 0,-50" fill="#38755b" />
+              <line x2="0" y2="10" stroke="#778074" stroke-width="2" />
+            </g>
+
+            <g transform="scale(1.2) translate(40 30)">
+              <polygon points="-10,0 10,0 0,-50" fill="#38755b" />
+              <line x2="0" y2="10" stroke="#778074" stroke-width="2" />
+            </g>
+
+            <!-- nieve -->
+            <circle cx="0" cy="0" r="5" class="snowflake fast" style="--y: 0" />
+            <circle cx="-50" cy="0" r="5" class="snowflake fast" style="--y: 120" />
+            <circle cx="-30" cy="0" r="5" class="snowflake fast" style="--y: 40" />
+            <circle cx="50" cy="0" r="5" class="snowflake fast" style="--y: 20" />
+          </g>
+
+          <circle r="80" fill="none" stroke="gray" stroke-width="2" />
+        </svg>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
